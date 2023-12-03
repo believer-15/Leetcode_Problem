@@ -4,7 +4,7 @@ class Solution {
         int r = 0;
         int n = s.length();
         int count = 0;
-        int max = 0;
+        int max = Integer.MIN_VALUE;
 
         while(r < n){
             char ch =  s.charAt(r);
