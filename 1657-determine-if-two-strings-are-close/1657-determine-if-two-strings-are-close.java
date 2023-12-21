@@ -18,31 +18,31 @@ class Solution {
                 return false;
             }
         }
-        Arrays.sort(arr1);
-        Arrays.sort(arr2);
+//         Arrays.sort(arr1);
+//         Arrays.sort(arr2);
         
-        return Arrays.equals(arr1, arr2);
+//         return Arrays.equals(arr1, arr2);
 
-//         HashMap<Integer, Integer> map = new HashMap<>();
+        HashMap<Integer, Integer> map = new HashMap<>();
 
-//         for(int i : arr1){
-//             if(i>0){
-//                 map.put(i,map.getOrDefault(i,0)+1);
-//             }
-//         }
+        for(int i : arr1){
+            if(i>0){
+                map.put(i,map.getOrDefault(i,0)+1);
+            }
+        }
 
-//         for(int i : arr2){
-//             if(i> 0){
-//                 if(!map.containsKey(i)){
-//                     return false;
-//                 }
+        for(int i : arr2){
+            if(i> 0){
+                if(!map.containsKey(i)){
+                    return false;
+                }
 
-//                 map.put(i, map.get(i) -1);
-//                 if(map.get(i) == 0){
-//                     map.remove(i);
-//                 }
-//             }
-//         }
-//         return map.size() == 0;
+                map.put(i, map.get(i) -1);
+                if(map.get(i) == 0){
+                    map.remove(i);
+                }
+            }
+        }
+        return map.size() == 0;
     }
 }
