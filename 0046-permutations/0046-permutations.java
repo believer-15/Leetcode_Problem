@@ -1,7 +1,6 @@
 class Solution {
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();
-        List<Integer> output = new ArrayList<>();
         int index = 0;
         solve(nums,ans, index);
         return ans;
